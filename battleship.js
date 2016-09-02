@@ -65,6 +65,14 @@ var gameBoard = [
 
 function fireTorpedo() {
 
-	// Your game logic will go here!
-
+	var userInput = $("#fire").val();
+	var rowLetter = userInput.substring(0,1);
+	var column = userInput.substring(1,2);
+	var row = letterConversion[rowLetter];
+	var twoDimensionalArray = [
+ ["a", "b", "c"],
+ ["d", "e", "f"],
+ ["g", "h", "i"]
+ ];
+ twoDimensionalArray ("#colorInput").val());
 }
