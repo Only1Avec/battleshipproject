@@ -8,8 +8,6 @@ var gameBoardContainer = document.getElementById("gameboard");
 
 // you can use this to convert your letters into numbers for use
 // with the 2D array
-var arrayLetters = ['A','B','C','D','E','F','G','H','I','J']
-
 var letterConversion = {
 	"A": 0,
 	"B": 1,
@@ -22,6 +20,9 @@ var letterConversion = {
 	"I": 8,
 	"J": 9
 }
+
+
+var letterArray = ["A","B","C","D","E","F","G","H","I","J"]
 
 // makes the grid columns and rows
 for (i = 0; i < cols; i++) {
@@ -37,7 +38,8 @@ for (i = 0; i < cols; i++) {
 
 		// THIS IS WHERE YOU WILL ADD CODE FOR PART 1 TO ADD TEXT TO EACH SQUARE
 
-		square.textContent = arrayLetters[j] + (i + 1);
+
+		square.textContent = letterArray[j] + (i + 1);
 
 		// set each grid square's coordinates: multiples of the current row or column number
 		var topPosition = j * squareSize;
@@ -61,18 +63,35 @@ var gameBoard = [
 				[1,0,0,1,0,0,0,0,0,0],
 				[1,0,0,1,0,0,0,0,0,0],
 				[1,0,0,0,0,0,0,0,0,0]
-			  ]
+				]
+
+var row;
+var x;
+var column;
+var torpedo;
+var first;
+var second;
+var converted;
+var hitHolder = 0;
+
+
 
 function fireTorpedo() {
 
-	var userInput = $("#fire").val();
-	var rowLetter = userInput.substring(0,1);
-	var column = userInput.substring(1,2);
-	var row = letterConversion[rowLetter];
-	var twoDimensionalArray = [
- ["a", "b", "c"],
- ["d", "e", "f"],
- ["g", "h", "i"]
- ];
- twoDimensionalArray ("#colorInput").val());
+	torpedo = document.getElementById("fireInput").value;
+	x = torpedo.substring(0, 1);
+	row = letterConversion[x];
+	column = torpedo.substring(1, 3);
+
+if (gameBoard[row][column - 1] == 1){
+
+	document.getElementById("s" + row + (column - 1)).style.background =  "red";
+
+	}
+	else {
+
+		document.getElementById("s" + row + (column - 1)).style.background = "cyan";
+
+		}
+var userInput = $("fireInput").val();
 }

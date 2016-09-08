@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>BattleChip</title>
+		<title>BattleChip!</title>
 		<link rel="stylesheet" type="text/css" href="battleship.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	</head>
 	<body>
 
 	<div id="instructionsArea">
-		<h1>BattleChip</h1>
-		<p id="instructions">Use the text box to enter your coordinate guess. Gotta do the PEW PEW. Try to sink every BattleChip!</p>
-	</div>
+		<h1>BattleChip!</h1>
+		<p id="instructions">Use the text box to enter your coordinate guess. You gotta dew the PEW PEW! Try to sink every BattleChip!</p>
+		<input type="text" id="fireInput"></br>
 
-	<form>
-		Coordinates:<br>
-		<input type="text" id="fire">
-		<input type="submit" value="Submit">
-	</form>
+<button onclick="fireTorpedo()">Fire</button>
+
+	</div>
 
 	<div id="gameboard">
 	</div>
